@@ -47,11 +47,11 @@ func (e *OpsExecutor) execQuery(
 	query := coll.Find(content["query"])
 	result := []Document{}
 	if content["ntoreturn"] != nil {
-		ntoreturn := int(content["ntoreturn"].(float64))
+		ntoreturn := int(content["ntoreturn"].(int32))
 		query.Limit(ntoreturn)
 	}
 	if content["ntoskip"] != nil {
-		ntoskip := int(content["ntoskip"].(float64))
+		ntoskip := int(content["ntoskip"].(int32))
 		query.Skip(ntoskip)
 	}
 	err := query.All(&result)
