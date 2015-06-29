@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ParsePlatform/flashback"
+	"github.com/nderzhak/flashback"
 	"gopkg.in/mgo.v2"
 )
 
